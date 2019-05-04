@@ -57,24 +57,6 @@ class bracket_proxy{
 
 
 
-/*Helper class --- expression template (not used)
-*/
-// template <typename LHS, typename RHS>
-// class MatrixSum{
-// public:
-//     using value_type = typename LHS::value_type;
-
-//     MatrixSum(const LHS& lhs, const RHS& rhs) : rhs(rhs), lhs(lhs) {}
-    
-//     value_type operator() (int x, int y) const  {
-//         return lhs(x, y) + rhs(x, y);
-//     }
-// private:
-//     const LHS& lhs;
-//     const RHS& rhs;
-// };
-
-//MatrixSum<Matrix<double>, Matrix<double> > SumAB(a, b);
 
 
 
@@ -295,59 +277,6 @@ void Array2D<T>::setonce(T data){
 /**/
 
 
-
-
-// template <class T>
-// Array2D<T> 
-// operator+(const Array2D<T>& lhs, const Array2D<T>& rhs) {
-// 	assert(lhs.nrows == rhs.nrows);
-// 	assert(lhs.ncols == rhs.ncols);
-//     int nrows = lhs.nrows;
-//     int ncols = lhs.ncols;
-
-//     Array2D<T> result;
-
-//     int size = nrows*ncols;
-//     int i;
-//     for(i=0; i < size; i++) {
-//     	result.array[i] = lhs.array[i] + rhs.array[i];
-//     }
-//     return result;
-// }
-
-
-
-// // generic expression template helper:
-//
-// template <typename T1, typename T2>
-// class vector_sum{
-// public:
-//     vector_sum(const V1& v1, const V2& v2): v1(v1) + v2(v2){}
-
-//     using value_type = std::common_type_t<typename T1::value_type,
-//                                           typename T2::value_type>;
-
-//     value_type operator[](int i) const {return v1[i] + v2[i];}
-// };
-//
-//
-//
-// // generic expression template:
-//
-// template <typename T1, typename T2>
-// inline vector_sum<V1,V2> operator +(const V1& x, const V2& y){
-//     return {x,y};
-// }
-
-// template <typename LHS, typename RHS>
-// MatrixSum<LHS, RHS> operator+(const LHS& lhs, const LHS& rhs) {
-//     return MatrixSum<LHS, RHS>(lhs, rhs);
-// }
-
-// template <class T>
-// Array2D<T> operator+(const LHS& lhs, const LHS& rhs) {
-//     return MatrixSum<LHS, RHS>(lhs, rhs);
-// }
 
 
 
